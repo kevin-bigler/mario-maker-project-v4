@@ -1,0 +1,20 @@
+{
+  "name": "mario-maker-project-v4",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/kevin-bigler/mario-maker-project-v4.git",
+  "author": "Kevin Bigler <kevinbigler@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "scripts": {
+    "test": "jest src"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

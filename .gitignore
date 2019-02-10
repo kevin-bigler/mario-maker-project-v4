@@ -1,2 +1,11 @@
 .idea/
 node_modules/
+
+# npm lock file, log files
+package-lock.json
+npm-error.log*
+npm-debug.log*
+
+# yarn log files
+yarn-error.log*
+yarn-warn.log*
