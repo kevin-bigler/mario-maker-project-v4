@@ -1,18 +1,23 @@
 {
   "name": "mario-maker-project-v4",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "src/index.js",
   "repository": "https://github.com/kevin-bigler/mario-maker-project-v4.git",
   "author": "Kevin Bigler <kevinbigler@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "jest": "^24.1.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "axios": "^0.18.0"
   },
   "scripts": {
-    "test": "jest src"
+    "test": "jest src",
+    "build": "babel src --out-dir dist"
   },
   "jest": {
     "testEnvironment": "node"
