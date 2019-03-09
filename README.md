@@ -30,11 +30,15 @@ npm install --save @babel/polyfill
 
 ```javascript
 // babel.config.js
-const presets = ['env', {
-                              "targets": {
-                                "node": "8.10.0"
-                              }
-                            }];
+const presets = [
+    [
+        '@babel/preset-env', {
+            'targets': {
+                'node': '8.10.0'
+            }
+        }
+    ]
+];
 module.exports = { presets };
 ```
 
