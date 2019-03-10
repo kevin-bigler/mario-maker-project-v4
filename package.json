@@ -9,6 +9,8 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@babel/preset-flow": "^7.0.0",
+    "flow-bin": "^0.94.0",
     "jest": "^24.1.0"
   },
   "dependencies": {
@@ -17,7 +19,10 @@
   },
   "scripts": {
     "test": "jest src",
-    "build": "babel src --out-dir dist"
+    "flow": "flow check",
+    "pretest": "npm run flow",
+    "build": "babel src --out-dir dist",
+    "prebuild": "npm test"
   },
   "jest": {
     "testEnvironment": "node"

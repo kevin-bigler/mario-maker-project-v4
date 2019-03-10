@@ -1,3 +1,12 @@
-import thing from './main/thing';
+// import thing from './main/thing';
+//
+// console.log(thing);
+// @flow
 
-console.log(thing);
+import sum from './main/sum';
+
+const values = [1, 2, 'three'];
+
+const getRandomValue = () => ''; // TODO
+
+sum(getRandomValue(), 10);

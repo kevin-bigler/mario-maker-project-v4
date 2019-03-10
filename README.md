@@ -63,7 +63,47 @@ package.json script:
 ```json
 {
   "scripts": {
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "prebuild": "npm test"
   }
 }
 ```
+
+### Flow
+
+Adding flow to the build process for type-checking.
+
+Start with static type-checking (regular `flow`).
+
+```shell
+npm install --save-dev flow-bin @babel/preset-flow
+```
+
+package.json
+
+```json
+{
+  "scripts": {
+    "flow": "flow",
+    "pretest": "npm run flow"
+  }
+}
+```
+
+```shell
+npm flow init
+```
+
+then change the package.json "flow" script to `"flow": "flow check"`
+
+.babelrc
+
+```json
+{
+  "presets": [
+    "@babel/preset-flow"
+  ]
+}
+```
+
+TODO: try out parcel as a replacement for directly using babel etc libs
